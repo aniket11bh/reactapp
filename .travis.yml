@@ -4,6 +4,9 @@ services:
   - docker
 
 before_install:
+  - docker build -t aniket11bh/reactapp -f Dev.Dockerfile .
+
+script:
   - docker run -e CI=true aniket11bh/reactapp npm run test
 
 language: generic
