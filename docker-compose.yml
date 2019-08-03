@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  myreactapp: 
+    build: 
+      context: .
+      dockerfile: Dev.Dockerfile
+    ports:
+      - "3000:3000"
+    volumes:
+      - /usr/myapp/node_modules
+      - .:/usr/myapp
+
